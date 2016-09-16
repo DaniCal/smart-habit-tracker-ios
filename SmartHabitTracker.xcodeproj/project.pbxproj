@@ -15,6 +15,7 @@
 		82F81AF91D8C0DEF00BF48AF /* SmartHabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81AF81D8C0DEF00BF48AF /* SmartHabitTrackerTests.swift */; };
 		82F81B041D8C0DEF00BF48AF /* SmartHabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B031D8C0DEF00BF48AF /* SmartHabitTrackerUITests.swift */; };
 		82F81B131D8C11AF00BF48AF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B121D8C11AF00BF48AF /* Action.swift */; };
+		82F81B151D8C151800BF48AF /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		82F81B031D8C0DEF00BF48AF /* SmartHabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHabitTrackerUITests.swift; sourceTree = "<group>"; };
 		82F81B051D8C0DEF00BF48AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F81B121D8C11AF00BF48AF /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				82F81AE31D8C0DEF00BF48AF /* AppDelegate.swift */,
 				82F81AE51D8C0DEF00BF48AF /* ViewController.swift */,
 				82F81AE71D8C0DEF00BF48AF /* Main.storyboard */,
+				82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */,
 				82F81AEA1D8C0DEF00BF48AF /* Assets.xcassets */,
 				82F81AEC1D8C0DEF00BF48AF /* LaunchScreen.storyboard */,
 				82F81AEF1D8C0DEF00BF48AF /* Info.plist */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82F81AE61D8C0DEF00BF48AF /* ViewController.swift in Sources */,
+				82F81B151D8C151800BF48AF /* ActionTableViewCell.swift in Sources */,
 				82F81B131D8C11AF00BF48AF /* Action.swift in Sources */,
 				82F81AE41D8C0DEF00BF48AF /* AppDelegate.swift in Sources */,
 			);
