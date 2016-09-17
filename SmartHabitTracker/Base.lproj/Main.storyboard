@@ -58,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Action"/>
                                 <connections>
-                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a80-Cz-9KF"/>
+                                    <segue destination="Cv0-Fw-6TR" kind="show" id="ek6-wJ-ewJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,6 +71,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="224.80000000000001" y="103.89805097451276"/>
+        </scene>
+        <!--Choose Action View Controller-->
+        <scene sceneID="NX8-rQ-siJ">
+            <objects>
+                <viewController id="Cv0-Fw-6TR" customClass="ChooseActionViewController" customModule="SmartHabitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PUf-CI-Mo4"/>
+                        <viewControllerLayoutGuide type="bottom" id="nnr-bo-JXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TXP-Gj-AtQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHZ-Oa-xCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="104"/>
         </scene>
     </scenes>
     <resources>

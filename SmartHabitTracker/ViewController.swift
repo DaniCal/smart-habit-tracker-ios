@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     }
 
     //Mark actions
-    @IBAction func addAction(_ sender: UIButton) {
-    }
+
 
 }
 
