@@ -17,6 +17,7 @@
 		82F81B131D8C11AF00BF48AF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B121D8C11AF00BF48AF /* Action.swift */; };
 		82F81B151D8C151800BF48AF /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */; };
 		82F81B171D8D8C4700BF48AF /* ChooseActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B161D8D8C4700BF48AF /* ChooseActionViewController.swift */; };
+		82F81B191D8D932D00BF48AF /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81B181D8D932D00BF48AF /* ActionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		82F81B121D8C11AF00BF48AF /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		82F81B161D8D8C4700BF48AF /* ChooseActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseActionViewController.swift; sourceTree = "<group>"; };
+		82F81B181D8D932D00BF48AF /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				82F81AE51D8C0DEF00BF48AF /* ViewController.swift */,
 				82F81B161D8D8C4700BF48AF /* ChooseActionViewController.swift */,
 				82F81AE71D8C0DEF00BF48AF /* Main.storyboard */,
+				82F81B181D8D932D00BF48AF /* ActionCollectionViewCell.swift */,
 				82F81B141D8C151800BF48AF /* ActionTableViewCell.swift */,
 				82F81AEA1D8C0DEF00BF48AF /* Assets.xcassets */,
 				82F81AEC1D8C0DEF00BF48AF /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			files = (
 				82F81B171D8D8C4700BF48AF /* ChooseActionViewController.swift in Sources */,
 				82F81AE61D8C0DEF00BF48AF /* ViewController.swift in Sources */,
+				82F81B191D8D932D00BF48AF /* ActionCollectionViewCell.swift in Sources */,
 				82F81B151D8C151800BF48AF /* ActionTableViewCell.swift in Sources */,
 				82F81B131D8C11AF00BF48AF /* Action.swift in Sources */,
 				82F81AE41D8C0DEF00BF48AF /* AppDelegate.swift in Sources */,
