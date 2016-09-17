@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ActionChosenDelegate {
 
     //Mark properties
     
@@ -23,6 +23,19 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showChooseActionView"){
+            let chooseActionVC:ChooseActionViewController = segue.destination  as! ChooseActionViewController
+            chooseActionVC.delegate = self
+        }
+        
+    }
+    
+    func userDidChooseAction(selectedAction: Int) {
+        print("You selected an action")
     }
 
     //Mark actions

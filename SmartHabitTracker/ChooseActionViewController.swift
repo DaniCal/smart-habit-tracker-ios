@@ -9,10 +9,17 @@
 import Foundation
 import UIKit
 
+protocol ActionChosenDelegate {
+    func userDidChooseAction(selectedAction: Int)
+}
+
 class ChooseActionViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    var delegate : ActionChosenDelegate? = nil
     
     let reuseIdentifier = "chooseActionCell"
     var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var selectedAction : Int = -1;
     
     override func viewDidLoad() {
     
@@ -33,10 +40,28 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
     
     // MARK: - UICollectionViewDelegate protocol
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // handle tap events
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        selectedAction = indexPath.item
         print("You selected cell #\(indexPath.item)!")
+        
     }
+    
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (delegate != nil){
+            let selectedAction : Int = self.selectedAction
+            delegate!.userDidChooseAction(selectedAction: selectedAction)
+        }
+
+    }
+    
+    
+    
     
 
 }

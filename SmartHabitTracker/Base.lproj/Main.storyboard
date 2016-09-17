@@ -58,7 +58,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Action"/>
                                 <connections>
-                                    <segue destination="Cv0-Fw-6TR" kind="show" id="ek6-wJ-ewJ"/>
+                                    <segue destination="Cv0-Fw-6TR" kind="show" identifier="showChooseActionView" id="ek6-wJ-ewJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,6 +109,9 @@
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="yXG-kx-GDo"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
