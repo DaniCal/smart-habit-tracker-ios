@@ -109,9 +109,6 @@
                                             </subviews>
                                         </view>
                                         <size key="customSize" width="100" height="100"/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="yXG-kx-GDo"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -122,6 +119,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMainView" id="46M-bF-gIP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHZ-Oa-xCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

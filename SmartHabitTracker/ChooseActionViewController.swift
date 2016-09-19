@@ -38,30 +38,21 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
         return cell
     }
     
-    // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
-        selectedAction = indexPath.item
-        print("You selected cell #\(indexPath.item)!")
         
+        selectedAction = indexPath.item
+        performSegue(withIdentifier: "showMainView", sender: self)
     }
-    
-    
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (delegate != nil){
-            let selectedAction : Int = self.selectedAction
-            delegate!.userDidChooseAction(selectedAction: selectedAction)
+            if(segue.identifier == "showMainView"){
+                delegate!.userDidChooseAction(selectedAction: self.selectedAction)
+            }
         }
-
     }
-    
-    
-    
-    
 
 }

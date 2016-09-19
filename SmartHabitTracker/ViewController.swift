@@ -35,11 +35,8 @@ class ViewController: UIViewController, ActionChosenDelegate {
     }
     
     func userDidChooseAction(selectedAction: Int) {
-        print("You selected an action")
+        print("You selected an action \(selectedAction)")
     }
-
-    //Mark actions
-
 
 }
 
