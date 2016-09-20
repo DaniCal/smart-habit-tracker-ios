@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82A97F691D91340B00EFDB0E /* actions.json in Resources */ = {isa = PBXBuildFile; fileRef = 82A97F681D91340B00EFDB0E /* actions.json */; };
 		82F81AE41D8C0DEF00BF48AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81AE31D8C0DEF00BF48AF /* AppDelegate.swift */; };
 		82F81AE61D8C0DEF00BF48AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F81AE51D8C0DEF00BF48AF /* ViewController.swift */; };
 		82F81AE91D8C0DEF00BF48AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F81AE71D8C0DEF00BF48AF /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82A97F681D91340B00EFDB0E /* actions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = actions.json; sourceTree = "<group>"; };
 		82F81AE01D8C0DEF00BF48AF /* SmartHabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F81AE31D8C0DEF00BF48AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82F81AE51D8C0DEF00BF48AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82A97F671D9133E300EFDB0E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		82F81AD71D8C0DEF00BF48AF = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +114,8 @@
 		82F81AE21D8C0DEF00BF48AF /* SmartHabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				82A97F681D91340B00EFDB0E /* actions.json */,
+				82A97F671D9133E300EFDB0E /* Data */,
 				82F81B111D8C118300BF48AF /* Models */,
 				82F81AE31D8C0DEF00BF48AF /* AppDelegate.swift */,
 				82F81AE51D8C0DEF00BF48AF /* ViewController.swift */,
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82F81AEE1D8C0DEF00BF48AF /* LaunchScreen.storyboard in Resources */,
+				82A97F691D91340B00EFDB0E /* actions.json in Resources */,
 				82F81AEB1D8C0DEF00BF48AF /* Assets.xcassets in Resources */,
 				82F81AE91D8C0DEF00BF48AF /* Main.storyboard in Resources */,
 			);
@@ -527,6 +539,7 @@
 				82F81B0A1D8C0DEF00BF48AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82F81B0B1D8C0DEF00BF48AF /* Build configuration list for PBXNativeTarget "SmartHabitTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +548,7 @@
 				82F81B0D1D8C0DEF00BF48AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82F81B0E1D8C0DEF00BF48AF /* Build configuration list for PBXNativeTarget "SmartHabitTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +557,7 @@
 				82F81B101D8C0DEF00BF48AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

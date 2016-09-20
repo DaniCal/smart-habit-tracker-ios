@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var items: [String] = ["1"];
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        loadInitialData()
         // Override point for customization after application launch.
         return true
     }
@@ -41,7 +43,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
+    func loadInitialData() -> [Action] {
+        let path = Bundle.main.path(forResource: "actions", ofType: "json")
+        if (path == nil){
+            print("File could not be located")
+        }
+        let url = URL(fileURLWithPath: path!);
+        
+        do{
+            let data = try Data(contentsOf: url)
+        }catch{
+            print("Error loading file \(path)")
+        }
+        
+        var actions = [Action]()
+        
+        return actions
+    }
 }
 

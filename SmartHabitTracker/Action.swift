@@ -13,8 +13,6 @@ class Action{
     var timestamp : NSDate
     var actionName : String
     
-    
-    
     init(actionName : String) {
         self.actionName = actionName
         self.timestamp = NSDate()
