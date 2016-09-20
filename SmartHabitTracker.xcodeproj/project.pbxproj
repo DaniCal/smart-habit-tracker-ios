@@ -273,17 +273,20 @@
 					82F81ADF1D8C0DEF00BF48AF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 83QAZKHQQY;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					82F81AF31D8C0DEF00BF48AF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 83QAZKHQQY;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 						TestTargetID = 82F81ADF1D8C0DEF00BF48AF;
 					};
 					82F81AFE1D8C0DEF00BF48AF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7BU4Z229J5;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 82F81ADF1D8C0DEF00BF48AF;
 					};

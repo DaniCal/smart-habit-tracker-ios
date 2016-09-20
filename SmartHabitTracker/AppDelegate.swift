@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import SwiftyJSON
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error loading file \(path)")
         }
         
-        var actions = [Action]()
+        let actions = [Action]()
         
         return actions
     }

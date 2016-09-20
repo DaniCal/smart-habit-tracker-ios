@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 4191d951f549ffeae13800886cb36319a6eaa986
+PODS:
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - SwiftyJSON (from `https://github.com/appsailor/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: de73429b38b8994f614fb27c5ec094bb8a4833f2
+    :git: https://github.com/appsailor/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: a2c8573bd1fcb6ace819afc43b65342e06cfc51b
 
 COCOAPODS: 1.0.1

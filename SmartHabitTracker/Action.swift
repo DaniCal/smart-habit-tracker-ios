@@ -10,11 +10,11 @@ import Foundation
 
 
 class Action{
-    var timestamp : NSDate
+    var timestamp : Date
     var actionName : String
     
     init(actionName : String) {
         self.actionName = actionName
-        self.timestamp = NSDate()
+        self.timestamp = Date()
     }
 }

@@ -50,7 +50,7 @@ class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegat
         }
     }
     
-    @IBAction func userDidChooseAction(selectedAction: Int){
+    @IBAction func userDidChooseAction(_ selectedAction: Int){
         
         let indexPath = IndexPath(row: delegate.items.count - 1, section: 0)
 

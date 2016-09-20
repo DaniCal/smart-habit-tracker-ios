@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ActionChosenDelegate {
-    func userDidChooseAction(selectedAction: Int)
+    func userDidChooseAction(_ selectedAction: Int)
 }
 
 class ChooseActionViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
@@ -52,7 +52,7 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
         
         if (delegate != nil){
             if(segue.identifier == "showMainView"){
-                delegate!.userDidChooseAction(selectedAction: self.selectedAction)
+                delegate!.userDidChooseAction(self.selectedAction)
             }
         }
     }
