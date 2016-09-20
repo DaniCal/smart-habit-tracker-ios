@@ -8,21 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, ActionChosenDelegate {
+class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegate, UITableViewDataSource {
 
-    //Mark properties
+    var items: [String] = ["1"]
+    let cellIdentifier = "actionTableCell"
+    var delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    //Mark properties
     @IBOutlet weak var actionTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return delegate.items.count;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.actionTable.dequeueReusableCell(withIdentifier: cellIdentifier)! as UITableViewCell
         
-        // Do any additional setup after loading the view, typically from a nib.
+        cell.textLabel?.text = delegate.items[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        print("You selected cell #\(indexPath.row)!")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -31,12 +48,16 @@ class ViewController: UIViewController, ActionChosenDelegate {
             let chooseActionVC:ChooseActionViewController = segue.destination  as! ChooseActionViewController
             chooseActionVC.delegate = self
         }
-        
     }
     
-    func userDidChooseAction(selectedAction: Int) {
-        print("You selected an action \(selectedAction)")
-    }
+    @IBAction func userDidChooseAction(selectedAction: Int){
+        
+        let indexPath = IndexPath(row: delegate.items.count - 1, section: 0)
 
+        self.delegate.items.append(String(selectedAction))
+        self.actionTable.beginUpdates()
+        self.actionTable.insertRows(at: [indexPath], with: .automatic)
+        self.actionTable.endUpdates()        
+    }
 }
 

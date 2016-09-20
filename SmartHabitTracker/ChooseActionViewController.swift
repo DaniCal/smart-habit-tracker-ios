@@ -16,6 +16,7 @@ protocol ActionChosenDelegate {
 class ChooseActionViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     var delegate : ActionChosenDelegate? = nil
+
     
     let reuseIdentifier = "chooseActionCell"
     var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -40,9 +41,10 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+
         selectedAction = indexPath.item
-        performSegue(withIdentifier: "showMainView", sender: self)
+        self.performSegue(withIdentifier: "showMainView", sender: self)
+        
     }
     
     
