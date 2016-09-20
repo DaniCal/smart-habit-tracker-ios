@@ -54,9 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do{
             let data = try Data(contentsOf: url)
+            let json = JSON(data: data)
+            let name = json[0, "name"]
+            print("Ich trinke \(name)")
+
         }catch{
             print("Error loading file \(path)")
         }
+        
+
         
         let actions = [Action]()
         
