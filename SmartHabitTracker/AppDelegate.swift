@@ -14,8 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var items: [String] = ["1"]
+//    var items: [String] = ["1"]
     var actions : [Action] = []
+    var dayActions: [Action] = [Action(actionName: "burger")]
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         actions = loadInitialData()

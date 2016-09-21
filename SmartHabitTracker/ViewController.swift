@@ -22,13 +22,20 @@ class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.items.count;
+        return delegate.dayActions.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.actionTable.dequeueReusableCell(withIdentifier: cellIdentifier)! as UITableViewCell
+        let cell = self.actionTable.dequeueReusableCell(withIdentifier: cellIdentifier)! as! ActionTableViewCell
         
-        cell.textLabel?.text = delegate.items[indexPath.row]
+//        cell.textLabel?.text = delegate.items[indexPath.row]
+        
+        let imageName = delegate.dayActions[indexPath.row].actionName
+        
+        let image: UIImage = UIImage(named: imageName)!
+        
+        cell.actionSticker.image = image
+
         
         return cell
     }
@@ -52,9 +59,9 @@ class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegat
     
     @IBAction func userDidChooseAction(_ selectedAction: Int){
         
-        let indexPath = IndexPath(row: delegate.items.count - 1, section: 0)
+        let indexPath = IndexPath(row: delegate.dayActions.count - 1, section: 0)
 
-        self.delegate.items.append(String(selectedAction))
+        delegate.dayActions.append(Action(actionName: delegate.actions[selectedAction].actionName))
         self.actionTable.beginUpdates()
         self.actionTable.insertRows(at: [indexPath], with: .automatic)
         self.actionTable.endUpdates()        
