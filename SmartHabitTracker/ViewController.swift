@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegate, UITableViewDataSource {
 
-    var items: [String] = ["1"]
     let cellIdentifier = "actionTableCell"
-    var delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    //Mark properties
     @IBOutlet weak var actionTable: UITableView!
     
     override func viewDidLoad() {
@@ -22,27 +20,20 @@ class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.dayActions.count;
+        return appDelegate.dayActions.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.actionTable.dequeueReusableCell(withIdentifier: cellIdentifier)! as! ActionTableViewCell
         
-//        cell.textLabel?.text = delegate.items[indexPath.row]
-        
-        let imageName = delegate.dayActions[indexPath.row].actionName
-        
+        let imageName = appDelegate.dayActions[indexPath.row].actionName
         let image: UIImage = UIImage(named: imageName)!
-        
         cell.actionSticker.image = image
 
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        print("You selected cell #\(indexPath.row)!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,11 +48,13 @@ class ViewController: UIViewController, ActionChosenDelegate, UITableViewDelegat
         }
     }
     
+    //#ACTIONS
+    
     @IBAction func userDidChooseAction(_ selectedAction: Int){
         
-        let indexPath = IndexPath(row: delegate.dayActions.count - 1, section: 0)
-
-        delegate.dayActions.append(Action(actionName: delegate.actions[selectedAction].actionName))
+        let indexPath = IndexPath(row: appDelegate.dayActions.count - 1, section: 0)
+        let actionName = appDelegate.actions[selectedAction].actionName
+        appDelegate.dayActions.append(Action(actionName: actionName))
         self.actionTable.beginUpdates()
         self.actionTable.insertRows(at: [indexPath], with: .automatic)
         self.actionTable.endUpdates()        

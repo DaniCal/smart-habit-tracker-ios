@@ -14,9 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-//    var items: [String] = ["1"]
     var actions : [Action] = []
-    var dayActions: [Action] = [Action(actionName: "burger")]
+    var dayActions: [Action] = []
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -48,33 +47,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    
+    
     func loadInitialData() -> [Action] {
         var actions = [Action]()
         let path = Bundle.main.path(forResource: "actions", ofType: "json")
         if (path == nil){
             print("File could not be located")
         }
+        
         let url = URL(fileURLWithPath: path!);
         
         do{
             let data = try Data(contentsOf: url)
             let json = JSON(data: data)
             
-            
             for (_,subJson):(String, JSON) in json {
                 let name = subJson["name"].stringValue
-                actions.append(Action(actionName: name))
-                print("Ich trinke \(name)")
-            }
+                actions.append(Action(actionName: name))            }
 
         }catch{
             print("Error loading file \(path)")
         }
-        
-
-        
-        
-        
         return actions
     }
 }
