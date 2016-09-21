@@ -36,6 +36,11 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ActionCollectionViewCell
         
+        let image: UIImage = UIImage(named: "burger")!
+        
+        cell.actionSticker.image = image
+
+        
         return cell
     }
     
