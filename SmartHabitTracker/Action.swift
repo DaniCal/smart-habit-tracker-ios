@@ -10,11 +10,9 @@ import Foundation
 
 
 class Action{
-    var timestamp : Date
     var actionName : String
     
     init(actionName : String) {
         self.actionName = actionName
-        self.timestamp = Date()
     }
 }

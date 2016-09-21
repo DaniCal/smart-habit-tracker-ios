@@ -17,9 +17,9 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
     
     var delegate : ActionChosenDelegate? = nil
 
-    
+    var appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
     let reuseIdentifier = "chooseActionCell"
-    var items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     var selectedAction : Int = -1;
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.appDelegate.actions.count
     }
     
     // make a cell for each cell index path
@@ -35,8 +35,10 @@ class ChooseActionViewController : UIViewController, UICollectionViewDataSource,
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ActionCollectionViewCell
+        var actions : [Action] = self.appDelegate.actions
+        let imageName = actions[indexPath.row].actionName
         
-        let image: UIImage = UIImage(named: "burger")!
+        let image: UIImage = UIImage(named: imageName)!
         
         cell.actionSticker.image = image
 

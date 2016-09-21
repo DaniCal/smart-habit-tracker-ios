@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartHabitTracker/AppDelegate.swift"
-            timestampString = "496079850.877666"
+            timestampString = "496137936.695761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "loadInitialData()"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartHabitTracker/AppDelegate.swift"
-            timestampString = "496079849.125867"
+            timestampString = "496137937.648118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "loadInitialData()"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,46 +41,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartHabitTracker/AppDelegate.swift"
-            timestampString = "496079874.547125"
+            filePath = "SmartHabitTracker/ChooseActionViewController.swift"
+            timestampString = "496138584.182523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "loadInitialData()"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmartHabitTracker.AppDelegate.loadInitialData () -&gt; Swift.Array&lt;SmartHabitTracker.Action&gt;"
-                  moduleName = "SmartHabitTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/daniellohse/Documents/Development/HabitCoach/smart-habit-tracker-ios/SmartHabitTracker/AppDelegate.swift"
-                  timestampString = "496080060.885049"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "2929">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SmartHabitTracker.AppDelegate.loadInitialData () -&gt; Swift.Array&lt;SmartHabitTracker.Action&gt;"
-                  moduleName = "SmartHabitTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/daniellohse/Documents/Development/HabitCoach/smart-habit-tracker-ios/SmartHabitTracker/AppDelegate.swift"
-                  timestampString = "496080060.887183"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "3873">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -89,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartHabitTracker/AppDelegate.swift"
-            timestampString = "496079901.541004"
+            filePath = "SmartHabitTracker/ChooseActionViewController.swift"
+            timestampString = "496138584.182523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "loadInitialData()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

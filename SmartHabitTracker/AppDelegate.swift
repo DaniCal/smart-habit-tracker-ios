@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var items: [String] = ["1"];
+    var items: [String] = ["1"]
+    var actions : [Action] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        loadInitialData()
+        actions = loadInitialData()
         // Override point for customization after application launch.
         return true
     }
@@ -46,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func loadInitialData() -> [Action] {
+        var actions = [Action]()
         let path = Bundle.main.path(forResource: "actions", ofType: "json")
         if (path == nil){
             print("File could not be located")
@@ -55,8 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do{
             let data = try Data(contentsOf: url)
             let json = JSON(data: data)
-            let name = json[0, "name"]
-            print("Ich trinke \(name)")
+            
+            
+            for (_,subJson):(String, JSON) in json {
+                let name = subJson["name"].stringValue
+                actions.append(Action(actionName: name))
+                print("Ich trinke \(name)")
+            }
 
         }catch{
             print("Error loading file \(path)")
@@ -64,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         
-        let actions = [Action]()
+        
         
         return actions
     }
